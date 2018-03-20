@@ -3,7 +3,7 @@ var compression = require('compression');
 var helmet = require('helmet');
 
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://library:Tina1234@ds117759.mlab.com:17759/local_library';
+var mongoDB = process.env.MONGODB_URI || 'mongodb://library:Tina1234@ds117759.mlab.com:17759/local_library';
 
 // var mongoDB = 'mongodb://localhost/local_library';
 mongoose.connect(mongoDB);
